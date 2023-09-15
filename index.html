@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Загадка на коробки</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <button class="btn" onclick="restart()" id="btn-restart">Начать заново</button>
+        <div class="counter">Количество открытых коробок: <b id="count">0</b></div>
+        <div class="prisoner-check">Выбран заключенный № <b id="prisoner-check"></b></div>
+    </header>
+    <div class="b-cont">
+        <div class="rules">
+            <div class="rules-title">Правила:</div>
+            <ul>
+                <li>100 заключённых, пронумерованных от 1 до 100.</li>
+                <li>Их номера записаны на бумажках и случайным образом спрятаны в 100 коробках, расставленных в комнате.</li>
+                <li>Каждый заключенный может зайти в комнату 1 раз и попробовать найти свой номер, открыв максимум 50 коробок.</li>
+                <li>После этого заключённый должен закрыть все коробки и выйти, оставив всё так же, как было до его прихода. Общаться с другими заключёнными он больше не может.</li>
+                <li>Если все 100 заключенных найдут свой номер, их отпустят. Если хотя бы один не найдет, то всех казнят.</li>
+                <li>Заключенные могут обсудить стратегию — перед тем, как первый из них зайдет в комнату с коробками.</li>
+            </ul>
+            <div class="question-title">Вопрос:</div>
+            <div class="question">Какую стратегию выбрать? <br> Какая максимальная вероятность спастить всем?</div>
+            <div class="answer btn" onclick="answer()">Ответ</div>
+        </div>
+
+        <div class="box-cont"></div>
+
+        <div class="prisoner-wrap">
+            <div class="prisoner-title">Выбери заключенного чтобы начать:</div>
+            <div class="all-prisoner"></div>
+            <button onclick="autoplay()" class="btn btn-autoplay">autoplay</button>
+        </div>
+
+        <div class="modal">
+            <div class="modal-content">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/wWQ9YdreY9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button class="btn" onclick="autoplayOn()">Включить автоигру</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
